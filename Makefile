@@ -11,7 +11,7 @@ file=pp-complete.csv
 # Remove time (midnight) from date
 # Remove UUID
 pp-london.csv:$(file)
-awk ' /"(EC|WC|E|N|SE|SW|W|BR|CR|DA|EN|HA|IG|KT|RM|SM|TW|UB|WD){1}[1-9]{1,2}/ {print $$0}' $(file) >  pp-london.csv; london_file=pp-london.csv; sed -i 's/ 00:00//g' $(london_file); sed -i  's/\"{[A-Z0-9-]*}\",//g' $(london_file)
+awk ' /"(EC|WC|E|N|NW|SE|SW|W|BR|CR|DA|EN|HA|IG|KT|RM|SM|TW|UB|WD){1}[1-9]{1,2}/ {print $$0}' $(file) >  pp-london.csv; london_file=pp-london.csv; sed -i 's/ 00:00//g' $(london_file); sed -i  's/\"{[A-Z0-9-]*}\",//g' $(london_file)
 
 
 
